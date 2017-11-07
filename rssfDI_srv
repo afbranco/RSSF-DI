@@ -1,0 +1,39 @@
+ #!/bin/bash
+### BEGIN INIT INFO
+# Provides:       rssfDI
+# Required-Start: 
+# Required-Stop:
+# Default-Start:  2 3 4 5
+# Default-Stop:   0 1 6
+# Short-Description: RSSF DI Puc-Rio
+### END INIT INFO
+
+
+# Edit the following variables
+
+APP_USER="rssf"
+APP_SH="/home/rssf/rssf-DI/rssfDI.sh"
+
+
+################################################################################
+# Do not edit below
+
+APP_CMD="sudo -u $APP_USER -H $APP_SH"
+
+case "$1" in
+start)
+	$APP_CMD start
+;;
+stop)
+	$APP_CMD stop
+;;
+restart)
+	$APP_CMD restart
+;;
+*)
+	echo "Usage: service rssfDI_srv {start | stop | restart}"
+	exit 1
+;;
+esac
+
+exit 0
