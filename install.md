@@ -5,7 +5,7 @@ This assumes that the HTML page will be transferred/copied to another machine th
 **Note:** *This procedure assumes the web server machine as `obaluae.inf.puc-rio.br`. 
 Please, adjust the remote user and machine according to your project needs.*
 
-## This procedure will explain next items:
+## Steps summary:
 1. Install Lua 5.1 & LuaRocks
 2. Install TOSSAM
    - May need to fix some depencies versions
