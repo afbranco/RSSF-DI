@@ -59,6 +59,7 @@ wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/transfer
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI.sh
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI_srv
 chmod +x transfer
+chmod +x rssfDI.sh
 ```
 
 ## Configure service startup
