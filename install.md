@@ -1,6 +1,9 @@
 # Installation procedure
 This installation procedure was tested in a fresh installation of Ubuntu 16.04 server. 
-This assumes that the HTML page will be transfered/copied to another machine that serves the web.
+This assumes that the HTML page will be transferred/copied to another machine that serves the web.
+
+**Note:** *This procedure assumes the web server machine as `obaluae.inf.puc-rio.br`. 
+Please, adjust the remote user and machine accordingly to your project needs.*
 
 ## This procedure will explain next items:
 1. Install Lua 5.1 & LuaRocks
@@ -10,7 +13,8 @@ This assumes that the HTML page will be transfered/copied to another machine tha
 4. Dowload source files
 5. Configure USB access
 6. Configure SSH autologin
-7. Execution
+7. Download files in the web server machine
+8. Execution
 
 ## Install Lua & LuaRocks
 ```
@@ -67,7 +71,16 @@ You may test the login executing `ssh`. Do not forget to exit the login terminal
 cd ~
 ssh-keygen
 ssh-copy-id rssf@obaluae.inf.puc-rio.br
+```
+
+## Download files in the web server machine
+```
 ssh rssf@obaluae.inf.puc-rio.br
+mkdir public_html
+cd public_html
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/brasao.jpg
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/logo_di1.jpg
+exit
 ```
 
 ## Application execution
