@@ -1,6 +1,6 @@
  #!/bin/bash
  
- export APP_HOME="/home/rssf/rssf-DI"
+ export APP_HOME="/home/rssf/rssf_DI"
  APP_NAME="receiveData.lua"
  
  cd $APP_HOME
