@@ -3,7 +3,7 @@ This installation procedure was tested in a fresh installation of Ubuntu 16.04 s
 This assumes that the HTML page will be transferred/copied to another machine that serves the web.
 
 **Note:** *This procedure assumes the web server machine as `obaluae.inf.puc-rio.br`. 
-Please, adjust the remote user and machine accordingly to your project needs.*
+Please, adjust the remote user and machine according to your project needs.*
 
 ## This procedure will explain next items:
 1. Install Lua 5.1 & LuaRocks
