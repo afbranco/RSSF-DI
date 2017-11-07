@@ -11,10 +11,11 @@ Please, adjust the remote user and machine according to your project needs.*
    - May need to fix some depencies versions
 3. Install luaposix
 4. Dowload source files
-5. Configure USB access
-6. Configure SSH autologin
-7. Download files in the web server machine
-8. Execution
+5. Configure service startup
+6. Configure USB access
+7. Configure SSH autologin
+8. Download files in the web server machine
+9. Execution
 
 ## Install Lua & LuaRocks
 ```
@@ -55,9 +56,20 @@ wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/receiveData.lua
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/svg4.lua
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/svg5.lua
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/transfer
-
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI.sh
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI_srv
 chmod +x transfer
 ```
+
+## Configure service startup
+
+**Note:** *If necessary, update the local user and path inside `rssfDI.sh` and `rssfDI_srv` files.*
+```
+cd ~/rssf_DI
+cp rssfDI_srv /etc/init.d
+update-rc.d rssfDI_srv defaults 95
+```
+
 
 ## Configure USB access
 ```
@@ -84,10 +96,21 @@ exit
 ```
 
 ## Application execution
+
+1. Start in the command line
+
 Inside `rssf_DI` directory, execute:
 ```
 cd ~/rssf_DI
 lua receiveData.lua
 ```
 
+2. Start as a service
+```
+service rssfDI_srv start
+```
 
+3. Stop the service
+```
+service rssfDI_srv stop
+```
