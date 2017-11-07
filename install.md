@@ -60,6 +60,7 @@ wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI.sh
 wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/rssfDI_srv
 chmod +x transfer
 chmod +x rssfDI.sh
+chmod +x rssfDI_srv
 ```
 
 ## Configure service startup
@@ -67,8 +68,8 @@ chmod +x rssfDI.sh
 **Note:** *If necessary, update the local user and path inside `rssfDI.sh` and `rssfDI_srv` files.*
 ```
 cd ~/rssf_DI
-cp rssfDI_srv /etc/init.d
-update-rc.d rssfDI_srv defaults 95
+sudo cp rssfDI_srv /etc/init.d/
+sudo update-rc.d rssfDI_srv defaults 95
 ```
 
 
