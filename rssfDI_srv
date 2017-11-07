@@ -12,7 +12,7 @@
 # Edit the following variables
 
 APP_USER="rssf"
-APP_SH="/home/rssf/rssf-DI/rssfDI.sh"
+APP_SH="/home/rssf/rssf_DI/rssfDI.sh"
 
 
 ################################################################################
