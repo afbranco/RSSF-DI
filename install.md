@@ -99,20 +99,23 @@ exit
 
 ## Application execution
 
-1. Start in the command line
+1. Start/Stop in the command line
 
 Inside `rssf_DI` directory, execute:
 ```
 cd ~/rssf_DI
-lua receiveData.lua
+sh rssfDI.sh start
+```
+```
+sh rssfDI.sh stop
 ```
 
-2. Start as a service
+2. ~~Start as a service~~
 ```
 service rssfDI_srv start
 ```
 
-3. Stop the service
+3. ~~Stop the service~~
 ```
 service rssfDI_srv stop
 ```
