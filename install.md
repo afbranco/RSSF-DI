@@ -11,7 +11,7 @@ Please, adjust the remote user and machine according to your project needs.*
    - May need to fix some depencies versions
 3. Install luaposix
 4. Dowload source files
-5. Configure service startup
+5.  :no_entry_sign: ~~Configure service startup~~  :no_entry_sign:
 6. Configure USB access
 7. Configure SSH autologin
 8. Download files in the web server machine
@@ -63,15 +63,15 @@ chmod +x rssfDI.sh
 chmod +x rssfDI_srv
 ```
 
-## Configure service startup
+##  :no_entry_sign: ~~Configure service startup~~
 
-**Note:** *If necessary, update the local user and path inside `rssfDI.sh` and `rssfDI_srv` files.*
+~~**Note:** *If necessary, update the local user and path inside `rssfDI.sh` and `rssfDI_srv` files.*~~
 ```
 cd ~/rssf_DI
 sudo cp rssfDI_srv /etc/init.d/
 sudo update-rc.d rssfDI_srv defaults 95
 ```
-
+ :heavy_exclamation_mark: Must be reviewed to work at Ubuntu 16.04 Server  :heavy_exclamation_mark:
 
 ## Configure USB access
 ```
