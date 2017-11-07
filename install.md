@@ -47,8 +47,34 @@ sudo luarocks install luaposix
 cd ~
 mkdir rssf_DI
 cd rssf_DI
-wget 
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/receiveData.lua
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/svg4.lua
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/svg5.lua
+wget https://raw.githubusercontent.com/afbranco/RSSF-DI/master/transfer
+
+chmod +x transfer
 ```
 
+## Configure USB access
+```
+sudo usermod -a -G dialout $USER
+```
+
+## Configure SSH autologin
+Execute `ssh-keygen` with default values and then copy the key executing `ssh-copy-id`.
+You may test the login executing `ssh`. Do not forget to exit the login terminal to continue the installation.
+```
+cd ~
+ssh-keygen
+ssh-copy-id rssf@obaluae.inf.puc-rio.br
+ssh rssf@obaluae.inf.puc-rio.br
+```
+
+## Application execution
+Inside `rssf_DI` directory, execute:
+```
+cd ~/rssf_DI
+lua receiveData.lua
+```
 
 
